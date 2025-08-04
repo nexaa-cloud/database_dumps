@@ -1,7 +1,7 @@
 FROM alpine:3.22
 
 #Add backup-user
-RUN apk add --no-cache mariadb-client postgresql17-client openssh s3cmd
+RUN apk add --no-cache mariadb-client postgresql17-client openssh aws-cli
 RUN addgroup -S backup && adduser -S backup -G backup
 
 #Set SSH config
